@@ -3,7 +3,7 @@ import { ThemeConfig } from "@/lib/themes";
 export interface SocialLinks {
   github?: string;
   linkedin?: string;
-  twitter?: string;
+  email?: string;
   instagram?: string;
   website?: string;
 }

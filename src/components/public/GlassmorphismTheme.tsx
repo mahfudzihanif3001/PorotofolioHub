@@ -6,7 +6,7 @@ import { useState } from "react";
 import {
   FaGithub,
   FaLinkedin,
-  FaTwitter,
+  FaEnvelope,
   FaInstagram,
   FaGlobe,
   FaMapMarkerAlt,
@@ -296,14 +296,13 @@ export default function GlassmorphismTheme({ profile, items }: ThemeProps) {
                   <FaLinkedin className="text-xl" />
                 </a>
               )}
-              {profile.socialLinks?.twitter && (
+              {profile.socialLinks?.email && (
                 <a
-                  href={profile.socialLinks.twitter}
-                  target="_blank"
+                  href={`mailto:${profile.socialLinks.email}`}
                   rel="noopener noreferrer"
                   className="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-cyan-400 hover:bg-white/30 hover:scale-110 hover:rotate-6 transition-all duration-300"
                 >
-                  <FaTwitter className="text-xl" />
+                  <FaEnvelope className="text-xl" />
                 </a>
               )}
               {profile.socialLinks?.instagram && (

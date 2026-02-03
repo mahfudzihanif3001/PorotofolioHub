@@ -22,7 +22,7 @@ interface User {
   socialLinks?: {
     github?: string;
     linkedin?: string;
-    twitter?: string;
+    email?: string;
     instagram?: string;
     website?: string;
   };

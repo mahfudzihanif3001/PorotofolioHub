@@ -7,7 +7,7 @@ import { useState } from "react";
 import {
   FaGithub,
   FaLinkedin,
-  FaTwitter,
+  FaEnvelope,
   FaInstagram,
   FaGlobe,
   FaMapMarkerAlt,
@@ -291,15 +291,14 @@ export default function CorporateTheme({ profile, items }: ThemeProps) {
                   <FaLinkedin className="text-2xl" />
                 </a>
               )}
-              {profile.socialLinks?.twitter && (
+              {profile.socialLinks?.email && (
                 <a
-                  href={profile.socialLinks.twitter}
-                  target="_blank"
+                  href={`mailto:${profile.socialLinks.email}`}
                   rel="noopener noreferrer"
                   className="text-slate-600 hover:text-[#c9a227] transition-colors"
-                  title="Twitter"
+                  title="Email"
                 >
-                  <FaTwitter className="text-2xl" />
+                  <FaEnvelope className="text-2xl" />
                 </a>
               )}
               {profile.socialLinks?.instagram && (

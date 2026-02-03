@@ -9,7 +9,7 @@ import {
   FaCamera,
   FaGithub,
   FaLinkedin,
-  FaTwitter,
+  FaEnvelope,
   FaInstagram,
   FaGlobe,
   FaLaptopCode,
@@ -31,7 +31,7 @@ export default function ProfilePage() {
     socialLinks: {
       github: "",
       linkedin: "",
-      twitter: "",
+      email: "",
       instagram: "",
       website: "",
     },
@@ -52,7 +52,7 @@ export default function ProfilePage() {
         socialLinks: {
           github: user.socialLinks?.github || "",
           linkedin: user.socialLinks?.linkedin || "",
-          twitter: user.socialLinks?.twitter || "",
+          email: user.socialLinks?.email || "",
           instagram: user.socialLinks?.instagram || "",
           website: user.socialLinks?.website || "",
         },
@@ -356,16 +356,14 @@ export default function ProfilePage() {
               </div>
               <div>
                 <label className="label flex items-center gap-2">
-                  <FaTwitter className="w-4 h-4" /> Twitter
+                  <FaEnvelope className="w-4 h-4" /> Email
                 </label>
                 <input
-                  type="url"
-                  value={formData.socialLinks.twitter}
-                  onChange={(e) =>
-                    handleSocialChange("twitter", e.target.value)
-                  }
+                  type="email"
+                  value={formData.socialLinks.email}
+                  onChange={(e) => handleSocialChange("email", e.target.value)}
                   className="input"
-                  placeholder="https://twitter.com/username"
+                  placeholder="your.email@example.com"
                 />
               </div>
               <div>

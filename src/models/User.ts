@@ -25,7 +25,7 @@ export interface IUser {
   socialLinks: {
     github?: string;
     linkedin?: string;
-    twitter?: string;
+    email?: string;
     instagram?: string;
     website?: string;
   };
@@ -110,7 +110,7 @@ const UserSchema = new mongoose.Schema<IUser>(
     socialLinks: {
       github: { type: String, default: "" },
       linkedin: { type: String, default: "" },
-      twitter: { type: String, default: "" },
+      email: { type: String, default: "" },
       instagram: { type: String, default: "" },
       website: { type: String, default: "" },
     },

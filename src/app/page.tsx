@@ -1,9 +1,20 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { useAuth } from '@/hooks/useAuth';
-import { FaRocket, FaPalette, FaCloudUploadAlt, FaUsers, FaGithub, FaLinkedin } from 'react-icons/fa';
-import { HiOutlineSparkles, HiOutlineColorSwatch, HiOutlineDocumentDuplicate } from 'react-icons/hi';
+import Link from "next/link";
+import { useAuth } from "@/hooks/useAuth";
+import {
+  FaRocket,
+  FaPalette,
+  FaCloudUploadAlt,
+  FaUsers,
+  FaGithub,
+  FaLinkedin,
+} from "react-icons/fa";
+import {
+  HiOutlineSparkles,
+  HiOutlineColorSwatch,
+  HiOutlineDocumentDuplicate,
+} from "react-icons/hi";
 
 export default function HomePage() {
   const { isAuthenticated, user, isLoading } = useAuth();
@@ -25,10 +36,7 @@ export default function HomePage() {
               {isLoading ? (
                 <div className="w-20 h-8 bg-gray-200 rounded-lg animate-pulse" />
               ) : isAuthenticated ? (
-                <Link
-                  href="/dashboard"
-                  className="btn btn-primary"
-                >
+                <Link href="/dashboard" className="btn btn-primary">
                   Dashboard
                 </Link>
               ) : (
@@ -39,10 +47,7 @@ export default function HomePage() {
                   >
                     Login
                   </Link>
-                  <Link
-                    href="/auth/register"
-                    className="btn btn-primary"
-                  >
+                  <Link href="/auth/register" className="btn btn-primary">
                     Get Started
                   </Link>
                 </>
@@ -57,9 +62,11 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-gray-100 rounded-full px-4 py-2 mb-6">
             <HiOutlineSparkles className="w-4 h-4 text-yellow-500" />
-            <span className="text-sm font-medium">Create your portfolio in minutes</span>
+            <span className="text-sm font-medium">
+              Create your portfolio in minutes
+            </span>
           </div>
-          
+
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
             Build Your Professional
             <br />
@@ -67,10 +74,11 @@ export default function HomePage() {
               Portfolio Today
             </span>
           </h1>
-          
+
           <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-10">
-            Create a stunning portfolio to showcase your projects, certificates, and experience. 
-            Choose from beautiful themes and share with a unique URL.
+            Create a stunning portfolio to showcase your projects, certificates,
+            and experience. Choose from beautiful themes and share with a unique
+            URL.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -91,7 +99,7 @@ export default function HomePage() {
           {/* Stats */}
           <div className="mt-16 grid grid-cols-3 gap-8 max-w-3xl mx-auto">
             <div>
-              <div className="text-4xl font-bold text-gray-900">5</div>
+              <div className="text-4xl font-bold text-gray-900">10</div>
               <div className="text-gray-600">Beautiful Themes</div>
             </div>
             <div>
@@ -124,9 +132,10 @@ export default function HomePage() {
               <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
                 <FaPalette className="w-6 h-6 text-purple-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">5 Stunning Themes</h3>
+              <h3 className="text-xl font-semibold mb-2">10 Stunning Themes</h3>
               <p className="text-gray-600">
-                Choose from Minimalist, Cyberpunk, Corporate, Creative, or Newspaper themes to match your style.
+                Choose from 10 unique themes including Minimalist, Cyberpunk,
+                Neo-Brutalism, Glassmorphism, and more to match your style.
               </p>
             </div>
 
@@ -137,7 +146,8 @@ export default function HomePage() {
               </div>
               <h3 className="text-xl font-semibold mb-2">Easy Uploads</h3>
               <p className="text-gray-600">
-                Upload images, PDFs, or add external links for your projects, certificates, and resume.
+                Upload images, PDFs, or add external links for your projects,
+                certificates, and resume.
               </p>
             </div>
 
@@ -148,7 +158,8 @@ export default function HomePage() {
               </div>
               <h3 className="text-xl font-semibold mb-2">IT & Non-IT Roles</h3>
               <p className="text-gray-600">
-                Tailored experience for both technical and non-technical professionals.
+                Tailored experience for both technical and non-technical
+                professionals.
               </p>
             </div>
 
@@ -159,7 +170,8 @@ export default function HomePage() {
               </div>
               <h3 className="text-xl font-semibold mb-2">Custom Profile</h3>
               <p className="text-gray-600">
-                Add your bio, skills, social links, and contact information to personalize your portfolio.
+                Add your bio, skills, social links, and contact information to
+                personalize your portfolio.
               </p>
             </div>
 
@@ -168,9 +180,12 @@ export default function HomePage() {
               <div className="w-12 h-12 bg-pink-100 rounded-xl flex items-center justify-center mb-4">
                 <HiOutlineDocumentDuplicate className="w-6 h-6 text-pink-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Multiple Categories</h3>
+              <h3 className="text-xl font-semibold mb-2">
+                Multiple Categories
+              </h3>
               <p className="text-gray-600">
-                Organize your work into Projects, Certificates, Resume, Experience, and Education.
+                Organize your work into Projects, Certificates, Resume,
+                Experience, and Education.
               </p>
             </div>
 
@@ -181,7 +196,8 @@ export default function HomePage() {
               </div>
               <h3 className="text-xl font-semibold mb-2">Public URL</h3>
               <p className="text-gray-600">
-                Get a unique public URL like domain.com/username to share with anyone.
+                Get a unique public URL like domain.com/username to share with
+                anyone.
               </p>
             </div>
           </div>
@@ -215,7 +231,9 @@ export default function HomePage() {
             {/* Cyberpunk */}
             <div className="bg-white rounded-2xl overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow">
               <div className="h-40 bg-gray-900 flex items-center justify-center">
-                <span className="text-4xl font-mono text-green-400 animate-pulse">_CODE</span>
+                <span className="text-4xl font-mono text-green-400 animate-pulse">
+                  _CODE
+                </span>
               </div>
               <div className="p-4">
                 <h3 className="font-semibold">Cyberpunk</h3>
@@ -230,7 +248,9 @@ export default function HomePage() {
               </div>
               <div className="p-4">
                 <h3 className="font-semibold">Corporate</h3>
-                <p className="text-sm text-gray-600">Professional business look</p>
+                <p className="text-sm text-gray-600">
+                  Professional business look
+                </p>
               </div>
             </div>
 
@@ -248,11 +268,75 @@ export default function HomePage() {
             {/* Newspaper */}
             <div className="bg-white rounded-2xl overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow">
               <div className="h-40 bg-[#f5f5dc] flex items-center justify-center">
-                <span className="text-3xl font-serif font-black text-gray-900">THE DAILY</span>
+                <span className="text-3xl font-serif font-black text-gray-900">
+                  THE DAILY
+                </span>
               </div>
               <div className="p-4">
                 <h3 className="font-semibold">Newspaper</h3>
                 <p className="text-sm text-gray-600">Classic editorial style</p>
+              </div>
+            </div>
+
+            {/* Neo-Brutalism */}
+            <div className="bg-white rounded-2xl overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow">
+              <div className="h-40 bg-yellow-300 border-4 border-black flex items-center justify-center">
+                <span className="text-4xl font-black text-black shadow-[4px_4px_0_0_#000]">
+                  BOLD
+                </span>
+              </div>
+              <div className="p-4">
+                <h3 className="font-semibold">Neo-Brutalism</h3>
+                <p className="text-sm text-gray-600">
+                  Bold & expressive design
+                </p>
+              </div>
+            </div>
+
+            {/* Glassmorphism */}
+            <div className="bg-white rounded-2xl overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow">
+              <div className="h-40 bg-gradient-to-br from-blue-400 via-purple-400 to-pink-400 flex items-center justify-center relative overflow-hidden">
+                <div className="absolute inset-0 backdrop-blur-sm bg-white/10"></div>
+                <span className="text-4xl font-light text-white relative z-10">
+                  Glass
+                </span>
+              </div>
+              <div className="p-4">
+                <h3 className="font-semibold">Glassmorphism</h3>
+                <p className="text-sm text-gray-600">Frosted glass aesthetic</p>
+              </div>
+            </div>
+
+            {/* Biophilic */}
+            <div className="bg-white rounded-2xl overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow">
+              <div className="h-40 bg-gradient-to-br from-amber-100 via-stone-100 to-green-100 flex items-center justify-center">
+                <span className="text-4xl">🌿</span>
+              </div>
+              <div className="p-4">
+                <h3 className="font-semibold">Biophilic</h3>
+                <p className="text-sm text-gray-600">Nature-inspired design</p>
+              </div>
+            </div>
+
+            {/* Y2K Retro */}
+            <div className="bg-white rounded-2xl overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow">
+              <div className="h-40 bg-gray-300 border-2 border-gray-400 flex items-center justify-center">
+                <span className="text-3xl font-mono text-teal-700">WIN98</span>
+              </div>
+              <div className="p-4">
+                <h3 className="font-semibold">Y2K Retro</h3>
+                <p className="text-sm text-gray-600">Windows 98 nostalgia</p>
+              </div>
+            </div>
+
+            {/* Luxury */}
+            <div className="bg-white rounded-2xl overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow">
+              <div className="h-40 bg-gradient-to-br from-gray-900 to-gray-800 flex items-center justify-center">
+                <span className="text-4xl font-serif text-[#c9a227]">Luxe</span>
+              </div>
+              <div className="p-4">
+                <h3 className="font-semibold">Luxury</h3>
+                <p className="text-sm text-gray-600">Elegant & sophisticated</p>
               </div>
             </div>
           </div>
@@ -288,7 +372,7 @@ export default function HomePage() {
               </div>
               <span className="font-bold text-xl">PortfolioHub</span>
             </div>
-            
+
             <div className="text-gray-600">
               Built with ❤️ using Next.js, MongoDB & Cloudinary
             </div>

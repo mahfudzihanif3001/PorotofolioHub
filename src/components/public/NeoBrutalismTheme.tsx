@@ -7,7 +7,7 @@ import { useState } from "react";
 import {
   FaGithub,
   FaLinkedin,
-  FaTwitter,
+  FaEnvelope,
   FaInstagram,
   FaGlobe,
   FaMapMarkerAlt,
@@ -308,14 +308,13 @@ export default function NeoBrutalismTheme({ profile, items }: ThemeProps) {
                   <FaLinkedin className="text-2xl" />
                 </a>
               )}
-              {profile.socialLinks?.twitter && (
+              {profile.socialLinks?.email && (
                 <a
-                  href={profile.socialLinks.twitter}
-                  target="_blank"
+                  href={`mailto:${profile.socialLinks.email}`}
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-cyan-400 text-black flex items-center justify-center border-4 border-black hover:bg-white transition-colors shadow-[4px_4px_0_0_#000] hover:shadow-[6px_6px_0_0_#000] hover:translate-x-[-2px] hover:translate-y-[-2px]"
                 >
-                  <FaTwitter className="text-2xl" />
+                  <FaEnvelope className="text-2xl" />
                 </a>
               )}
               {profile.socialLinks?.instagram && (

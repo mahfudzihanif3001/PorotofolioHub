@@ -6,7 +6,7 @@ import { useState } from "react";
 import {
   FaGithub,
   FaLinkedin,
-  FaTwitter,
+  FaEnvelope,
   FaInstagram,
   FaGlobe,
   FaMapMarkerAlt,
@@ -303,14 +303,13 @@ export default function BiophilicTheme({ profile, items }: ThemeProps) {
                   <FaLinkedin className="text-xl" />
                 </a>
               )}
-              {profile.socialLinks?.twitter && (
+              {profile.socialLinks?.email && (
                 <a
-                  href={profile.socialLinks.twitter}
-                  target="_blank"
+                  href={`mailto:${profile.socialLinks.email}`}
                   rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-lg bg-stone-100 border-2 border-stone-300 flex items-center justify-center text-sky-500 hover:bg-stone-200 hover:border-stone-400 transition-all duration-300"
+                  className="w-12 h-12 rounded-lg bg-stone-100 border-2 border-stone-300 flex items-center justify-center text-red-500 hover:bg-stone-200 hover:border-stone-400 transition-all duration-300"
                 >
-                  <FaTwitter className="text-xl" />
+                  <FaEnvelope className="text-xl" />
                 </a>
               )}
               {profile.socialLinks?.instagram && (

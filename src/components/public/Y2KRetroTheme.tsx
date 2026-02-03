@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 import {
   FaGithub,
   FaLinkedin,
-  FaTwitter,
+  FaEnvelope,
   FaInstagram,
   FaGlobe,
   FaMapMarkerAlt,
@@ -349,14 +349,13 @@ export default function Y2KRetroTheme({ profile, items }: ThemeProps) {
                     <FaLinkedin className="text-xl" />
                   </a>
                 )}
-                {profile.socialLinks?.twitter && (
+                {profile.socialLinks?.email && (
                   <a
-                    href={profile.socialLinks.twitter}
-                    target="_blank"
+                    href={`mailto:${profile.socialLinks.email}`}
                     rel="noopener noreferrer"
                     className="w-10 h-10 bg-gray-300 border-2 border-gray-400 shadow-[inset_-2px_-2px_0_0_#808080,inset_2px_2px_0_0_#fff] flex items-center justify-center text-cyan-500 hover:bg-gray-400 active:shadow-[inset_2px_2px_0_0_#808080,inset_-2px_-2px_0_0_#fff]"
                   >
-                    <FaTwitter className="text-xl" />
+                    <FaEnvelope className="text-xl" />
                   </a>
                 )}
                 {profile.socialLinks?.instagram && (

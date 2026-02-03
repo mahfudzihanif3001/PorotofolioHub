@@ -6,7 +6,7 @@ import { useState } from "react";
 import {
   FaGithub,
   FaLinkedin,
-  FaTwitter,
+  FaEnvelope,
   FaInstagram,
   FaGlobe,
   FaMapMarkerAlt,
@@ -306,14 +306,13 @@ export default function LuxuryTheme({ profile, items }: ThemeProps) {
                   <FaLinkedin className="text-2xl" />
                 </a>
               )}
-              {profile.socialLinks?.twitter && (
+              {profile.socialLinks?.email && (
                 <a
-                  href={profile.socialLinks.twitter}
-                  target="_blank"
+                  href={`mailto:${profile.socialLinks.email}`}
                   rel="noopener noreferrer"
                   className="text-neutral-400 hover:text-amber-700 transition-colors duration-300"
                 >
-                  <FaTwitter className="text-2xl" />
+                  <FaEnvelope className="text-2xl" />
                 </a>
               )}
               {profile.socialLinks?.instagram && (
