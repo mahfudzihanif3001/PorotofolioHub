@@ -106,7 +106,7 @@ export async function DELETE(request: NextRequest) {
     const publicIds: string[] = [];
     items.forEach((item) => {
       if (item.attachments) {
-        item.attachments.forEach((attachment) => {
+        item.attachments.forEach((attachment: { publicId?: string }) => {
           if (attachment.publicId) {
             publicIds.push(attachment.publicId);
           }
