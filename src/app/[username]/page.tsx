@@ -18,7 +18,7 @@ interface PageProps {
 
 // Fetch portfolio data
 async function getPortfolioData(username: string) {
-  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000";
+  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000";
 
   try {
     const res = await fetch(`${baseUrl}/api/public/${username}`, {
