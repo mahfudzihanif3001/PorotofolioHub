@@ -109,7 +109,7 @@ export default function RegisterPage() {
                   name="username"
                   value={formData.username}
                   onChange={handleChange}
-                  className="input pl-10"
+                  className="input !pl-10"
                   placeholder="johndoe"
                   required
                 />
@@ -130,7 +130,7 @@ export default function RegisterPage() {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="input pl-10"
+                  className="input !pl-10"
                   placeholder="you@example.com"
                   required
                 />
@@ -147,7 +147,7 @@ export default function RegisterPage() {
                   name="password"
                   value={formData.password}
                   onChange={handleChange}
-                  className="input pl-10 pr-10"
+                  className="input !pl-10 !pr-10"
                   placeholder="••••••••"
                   required
                 />
@@ -175,7 +175,7 @@ export default function RegisterPage() {
                   name="confirmPassword"
                   value={formData.confirmPassword}
                   onChange={handleChange}
-                  className="input pl-10"
+                  className="input !pl-10"
                   placeholder="••••••••"
                   required
                 />

@@ -57,12 +57,12 @@ export default function LoginPage() {
             <div>
               <label className="label">Email</label>
               <div className="relative">
-                <HiOutlineMail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+                <HiOutlineMail className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
                 <input
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="input pl-10"
+                  className="input !pl-12"
                   placeholder="you@example.com"
                   required
                 />
@@ -73,12 +73,12 @@ export default function LoginPage() {
             <div>
               <label className="label">Password</label>
               <div className="relative">
-                <HiOutlineLockClosed className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+                <HiOutlineLockClosed className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
                 <input
                   type={showPassword ? 'text' : 'password'}
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="input pl-10 pr-10"
+                  className="input !pl-12 !pr-12"
                   placeholder="••••••••"
                   required
                 />
