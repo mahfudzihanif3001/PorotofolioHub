@@ -109,10 +109,10 @@ export default async function PublicPortfolioPage({ params }: PageProps) {
   const themeName = profile.selectedTheme || "minimalist";
   const theme = getTheme(themeName);
 
-  // Get the appropriate theme component
   const ThemeComponent =
     themeComponents[themeName as keyof typeof themeComponents] ||
     MinimalistTheme;
 
   return <ThemeComponent profile={profile} items={items} theme={theme} />;
 }
+

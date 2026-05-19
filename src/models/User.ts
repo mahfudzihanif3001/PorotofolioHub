@@ -134,9 +134,8 @@ const UserSchema = new mongoose.Schema<IUser>(
   },
 );
 
-// Index for faster queries
-UserSchema.index({ username: 1 });
-UserSchema.index({ email: 1 });
+// Note: unique:true on username and email already creates indexes automatically.
+// UserSchema.index() calls for these fields are NOT needed and cause duplicate warnings.
 
 // Delete cached model in development to avoid issues with schema changes
 if (process.env.NODE_ENV === "development" && mongoose.models.User) {

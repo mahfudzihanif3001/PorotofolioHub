@@ -1,4 +1,14 @@
 import mongoose from 'mongoose';
+import dns from 'dns';
+
+// Fix for Windows ECONNREFUSED on SRV queries
+if (process.env.NODE_ENV === 'development') {
+  try {
+    dns.setServers(['8.8.8.8', '1.1.1.1']);
+  } catch (error) {
+    console.warn('Failed to set custom DNS servers:', error);
+  }
+}
 
 const MONGODB_URI = process.env.MONGODB_URI!;
 
