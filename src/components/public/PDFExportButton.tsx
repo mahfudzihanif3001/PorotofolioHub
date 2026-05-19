@@ -100,7 +100,7 @@ export function PDFExportButton({ profile, items, theme }: ThemeProps) {
         <div ref={pdfContainerRef}>
           {/* SLIDE 1: Cover (Very Simple & Clean) */}
           <div 
-            className={`pdf-slide w-[1280px] h-[720px] flex items-center justify-center p-20 ${theme.fonts.sans || "font-sans"} ${bgClass}`}
+            className={`pdf-slide w-[1280px] h-[720px] flex items-center justify-center p-20 ${theme.fonts.body || "font-sans"} ${bgClass}`}
             style={{ backgroundColor: theme.colors.background, color: theme.colors.text }}
           >
             <div className="w-full h-full border-[12px] p-16 flex items-center gap-16 rounded-3xl" style={{ borderColor: theme.colors.primary }}>
@@ -130,7 +130,7 @@ export function PDFExportButton({ profile, items, theme }: ThemeProps) {
 
           {/* SLIDE 2: About & Skills (Simple 2 Columns) */}
           <div 
-            className={`pdf-slide w-[1280px] h-[720px] flex flex-col p-20 ${theme.fonts.sans || "font-sans"} ${bgClass}`}
+            className={`pdf-slide w-[1280px] h-[720px] flex flex-col p-20 ${theme.fonts.body || "font-sans"} ${bgClass}`}
             style={{ backgroundColor: theme.colors.background, color: theme.colors.text }}
           >
             <h2 className={`text-6xl font-extrabold mb-12 border-b-4 pb-4 inline-block ${theme.fonts.heading || ""}`} style={{ color: theme.colors.primary, borderColor: theme.colors.secondary }}>
@@ -199,7 +199,7 @@ export function PDFExportButton({ profile, items, theme }: ThemeProps) {
           {projectPages.map((pageProjects, pageIdx) => (
             <div 
               key={`projects-${pageIdx}`}
-              className={`pdf-slide w-[1280px] h-[720px] flex flex-col p-20 ${theme.fonts.sans || "font-sans"} ${bgClass}`}
+              className={`pdf-slide w-[1280px] h-[720px] flex flex-col p-20 ${theme.fonts.body || "font-sans"} ${bgClass}`}
               style={{ backgroundColor: theme.colors.background, color: theme.colors.text }}
             >
               <h2 className={`text-6xl font-extrabold mb-12 border-b-4 pb-4 inline-block ${theme.fonts.heading || ""}`} style={{ color: theme.colors.primary, borderColor: theme.colors.secondary }}>
@@ -248,7 +248,7 @@ export function PDFExportButton({ profile, items, theme }: ThemeProps) {
           {experiencePages.length > 0 && experiencePages.map((pageExp, pageIdx) => (
             <div 
               key={`exp-${pageIdx}`}
-              className={`pdf-slide w-[1280px] h-[720px] flex flex-col p-20 ${theme.fonts.sans || "font-sans"} ${bgClass}`}
+              className={`pdf-slide w-[1280px] h-[720px] flex flex-col p-20 ${theme.fonts.body || "font-sans"} ${bgClass}`}
               style={{ backgroundColor: theme.colors.background, color: theme.colors.text }}
             >
               <h2 className={`text-6xl font-extrabold mb-12 border-b-4 pb-4 inline-block ${theme.fonts.heading || ""}`} style={{ color: theme.colors.primary, borderColor: theme.colors.secondary }}>
@@ -290,7 +290,7 @@ export function PDFExportButton({ profile, items, theme }: ThemeProps) {
           {eduCertPages.length > 0 && eduCertPages.map((pageEdu, pageIdx) => (
             <div 
               key={`edu-${pageIdx}`}
-              className={`pdf-slide w-[1280px] h-[720px] flex flex-col p-20 ${theme.fonts.sans || "font-sans"} ${bgClass}`}
+              className={`pdf-slide w-[1280px] h-[720px] flex flex-col p-20 ${theme.fonts.body || "font-sans"} ${bgClass}`}
               style={{ backgroundColor: theme.colors.background, color: theme.colors.text }}
             >
               <h2 className={`text-6xl font-extrabold mb-12 border-b-4 pb-4 inline-block ${theme.fonts.heading || ""}`} style={{ color: theme.colors.primary, borderColor: theme.colors.secondary }}>
