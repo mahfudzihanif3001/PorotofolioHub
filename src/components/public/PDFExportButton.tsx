@@ -143,7 +143,11 @@ export function PDFExportButton({ profile, items, theme }: ThemeProps) {
                 <div>
                   <h3 className="text-4xl font-bold mb-6" style={{ color: theme.colors.secondary }}>Contact</h3>
                   <div className="space-y-6 text-3xl font-medium opacity-90">
-                    {profile.email && <div className="flex items-center gap-6"><FaEnvelope /> <span>{profile.email}</span></div>}
+                    {profile.socialLinks?.email && (
+                      <div className="flex items-center gap-6">
+                        <FaEnvelope /> <span>{profile.socialLinks.email}</span>
+                      </div>
+                    )}
                     {profile.phone && <div className="flex items-center gap-6"><FaPhone /> <span>{profile.phone}</span></div>}
                     {profile.location && <div className="flex items-center gap-6"><FaMapMarkerAlt /> <span>{profile.location}</span></div>}
                   </div>
